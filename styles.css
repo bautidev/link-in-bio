@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/inter-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/inter-900.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #0a0f1c;
+  --card-bg: #0f1524;
+  --border: #1e2a3f;
+  --border-hover: #2f3f5c;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+h1, .title {
+  font-weight: 900;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 100%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+}
+
+.pfp {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  object-fit: cover;
+  margin: 0 auto 16px;
+}
+
+.name {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.link-btn .icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.link-btn:hover {
+  background-color: var(--border);
+  border-color: var(--border-hover);
+}
+
+.link-btn:active {
+  transform: scale(0.98);
+  background-color: var(--border-hover);
+}
+
+.link-btn:focus-visible {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 2px;
+}
+
+.footer-text {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-top: 16px;
+}
+
+@media (max-width: 380px) {
+  body {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 24px 16px;
+  }
+}
