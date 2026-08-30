@@ -36,6 +36,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,5 +144,33 @@ h1, .title {
 
   .card {
     padding: 24px 16px;
+  }
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    max-width: 460px;
+  }
+
+  .card {
+    padding: 40px 32px;
+  }
+
+  .pfp {
+    width: 104px;
+    height: 104px;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .link-btn {
+    padding: 14px 16px;
+    font-size: 1rem;
   }
 }
