@@ -13,5 +13,5 @@ Live at [bautiavila.com](https://bautiavila.com)
 
 - Fully responsive, mobile-first layout
 - SEO meta tags and Open Graph / Twitter Card support
-- Self hosted Inter font (no external font requests)
+- Self-hosted Inter font
 - Accessible focus states for keyboard navigation
