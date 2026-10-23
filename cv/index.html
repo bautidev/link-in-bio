@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>CV | Bautista Avila</title>
+    <script>
+      // Redirige al CV según el idioma del navegador (PDF directo).
+      (function () {
+        var lang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+        var file = String(lang).toLowerCase().indexOf('es') === 0
+          ? '../assets/cv/Bautista_Avila_CV_es.pdf'
+          : '../assets/cv/Bautista_Avila_CV_en.pdf';
+        window.location.replace(file);
+      })();
+    </script>
+  </head>
+  <body>
+    <p><a href="../assets/cv/Bautista_Avila_CV_es.pdf">CV en español</a></p>
+    <p><a href="../assets/cv/Bautista_Avila_CV_en.pdf">English CV</a></p>
+  </body>
+</html>
