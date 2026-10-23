@@ -94,5 +94,23 @@
         <p class="footer-text">Desarrollado por Bautista Avila © 2026</p>
       </div>
     </main>
+    <script>
+      // Easter egg: 10 toques a la foto abren un video en pestaña nueva.
+      (function () {
+        var pfp = document.querySelector('.pfp');
+        if (!pfp) return;
+        var taps = 0;
+        var timer = null;
+        pfp.addEventListener('click', function () {
+          taps += 1;
+          clearTimeout(timer);
+          timer = setTimeout(function () { taps = 0; }, 3000);
+          if (taps >= 10) {
+            taps = 0;
+            window.open('https://www.youtube.com/watch?v=P7Wo7tMt6g8', '_blank', 'noopener');
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

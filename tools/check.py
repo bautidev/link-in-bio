@@ -10,7 +10,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-HTML_FILES = sorted(ROOT.glob("*.html"))
+HTML_FILES = sorted(p for p in ROOT.glob("*.html") if not p.name.startswith("."))
 ASSET = re.compile(r'(?:src|href)="([^"#:]+)"')
 HOST_URL = re.compile(r"https://bautiavila\.com(/[^\"'\s>)]*)")
 SKIP_PREFIX = ("http", "mailto:", "data:", "//")
