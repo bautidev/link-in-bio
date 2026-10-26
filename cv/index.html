@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
+    <meta name="color-scheme" content="dark">
     <title>Bautista Avila | CV</title>
     <link rel="icon" type="image/webp" href="../assets/images/favicon.webp">
+    <style>
+      /* Fallback sin JS: misma tarjeta oscura del sitio. */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        color: #f8fafc;
+        background: #020617;
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        padding: 24px 16px;
+      }
+      main {
+        margin: auto;
+        width: 100%;
+        max-width: 400px;
+        background: rgba(15, 23, 42, 0.72);
+        border: 1px solid #475569;
+        border-radius: 6px;
+        padding: 28px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      a {
+        display: block;
+        padding: 12px 14px;
+        color: #f8fafc;
+        text-decoration: none;
+        background: rgba(148, 163, 184, 0.08);
+        border: 1px solid #475569;
+        border-radius: 6px;
+      }
+      a:hover { background: rgba(96, 165, 250, 0.15); border-color: #60a5fa; color: #60a5fa; }
+    </style>
     <script>
       // Redirect to the CV matching the browser language (direct PDF).
       (function () {
@@ -18,7 +54,9 @@
     </script>
   </head>
   <body>
-    <p><a href="../assets/cv/Bautista_Avila_CV_es.pdf">CV en español</a></p>
-    <p><a href="../assets/cv/Bautista_Avila_CV_en.pdf">English CV</a></p>
+    <main>
+      <p><a href="../assets/cv/Bautista_Avila_CV_es.pdf">CV en español</a></p>
+      <p><a href="../assets/cv/Bautista_Avila_CV_en.pdf">English CV</a></p>
+    </main>
   </body>
 </html>
